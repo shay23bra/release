@@ -10,7 +10,11 @@ base_images:
   insights-operator-tests:
     name: insights-operator-tests
     namespace: ci
-    tag: latest
+    tag: "4.22"
+  tls-scanner-tool:
+    name: 4.22-priv
+    namespace: ocp-private
+    tag: tls-scanner-tool
 build_root:
   from_repository: true
 canonical_go_repository: github.com/openshift/insights-operator
