@@ -135,6 +135,7 @@ presubmits:
     branches:
     - ^release-4\.23$
     - ^release-4\.23-
+    cluster: build06
     context: ci/prow/catalog-sync-catalog-data-freshness
     decorate: true
     decoration_config:
@@ -218,6 +219,7 @@ presubmits:
     branches:
     - ^release-4\.23$
     - ^release-4\.23-
+    cluster: build06
     context: ci/prow/catalog-sync-catalog-sync-verify
     decorate: true
     decoration_config:
@@ -301,6 +303,7 @@ presubmits:
     branches:
     - ^release-4\.23$
     - ^release-4\.23-
+    cluster: build06
     context: ci/prow/catalog-sync-images
     decorate: true
     decoration_config:
