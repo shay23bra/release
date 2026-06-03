@@ -1,22 +1,24 @@
 postsubmits:
-  openshift-priv/stolostron-must-gather:
+  openshift-priv/openstack-networking-generic-switch:
   - agent: kubernetes
     always_run: true
     branches:
-    - ^release-2\.13$
-    cluster: build13
+    - ^release-5\.1$
     decorate: true
     decoration_config:
       oauth_token_secret:
         key: oauth
         name: github-credentials-openshift-ci-robot-private-git-cloner
+      sparse_checkout_files:
+      - .ci-operator.yaml
+      - openstack-ngs-tester.Dockerfile
     hidden: true
     labels:
       ci-operator.openshift.io/is-promotion: "true"
       ci.openshift.io/generator: prowgen
     max_concurrency: 1
-    name: branch-ci-openshift-priv-stolostron-must-gather-release-2.13-images
-    path_alias: github.com/stolostron/must-gather
+    name: branch-ci-openshift-priv-openstack-networking-generic-switch-release-5.1-images
+    path_alias: github.com/openshift/openstack-networking-generic-switch
     spec:
       containers:
       - args:
